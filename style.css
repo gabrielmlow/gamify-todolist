@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #20243c;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 3rem auto;
+}
+.card {
+    border-radius: 5px;
+    background-color: #1c2444;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, .3);
+}
+
+.stats {
+    border-radius: 5px;
+    height: 10rem;
+}
+
+.tasks {
+    margin-top: 2rem;
+    border-radius: 2px;
+    display: flex;
+    height: 100%;
+}
+
+.tasks-subjects {
+    flex-grow: 1;
+}
+.subjects-nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.subjects-nav__link:visited, .subjects-nav__link:link {
+    text-decoration: none;
+    color: #FFF;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 0 1.5rem 2rem;
+}
+.subjects-nav__link:hover {
+    background-color: #20243c;
+}
+
+.tasks-desc {
+    background-color: #20243c;
+    flex-grow: 4;
+}
+
+.tasks-desc__container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 1rem;
+}
+
+.tasks-desc__item {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    background-color: #1c2444;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.tasks-desc__item:focus {
+    outline: none;
+}
+
+.tasks-desc__input {
+    /* /* display: block; */
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 1rem 0 1rem 1rem;
+    white-space: nowrap;
+    color: white;
+}
+
+.tasks-desc__input:focus {
+    outline: none;
+}
+
+input[type="checkbox"] {
+    height: 1.2rem;
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+.tasks-desc__item button {
+    cursor: pointer;
+}
+
+.tasks-desc__name {
+    margin-left: 0.875rem;
+}
+
+.tasks-desc__time {
+    margin-left: 2rem;
+}
+
+.tasks-desc__checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal__content {
+    background-color: #1c2444;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+
+.modal__form label {
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+}
+.modal__content input {
+    border-radius: 10px;
+    background-color: rgb(55,63,94);
+    color: #FFF;
+    padding: 0.75rem;
+    border: none;
+    font-size: medium;
+}
+
+.modal__content input:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.modal__content input:focus {
+    outline: none;
+}
+
+
+.modal__btn__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.modal__btn__container button {
+    margin: 0.5em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+
+.tasks-desc__header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #1c2444;
+    padding: 1rem;
+}
+
+
+
+
+/* Progress Circle */
+#progress-circle {
+    margin: 2rem;
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}

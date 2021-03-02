@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    <title>QuoteThis</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card stats">
+            <div id="progress-circle"></div>
+        </div>
+        <div class="card tasks">
+            <nav class="tasks-subjects">
+                <ul class="subjects-nav">
+                    <!-- <li class="subjects-nav__item" data-tab="1">
+                        <a href="#" class="subjects-nav__link">
+                            <span>Chemsitry</span>
+                        </a>
+                    </li>
+                    <li class="subjects-nav__item" data-tab="2">
+                        <a href="#" class="subjects-nav__link">
+                            <span>Algebra</span>
+                        </a>
+                    </li>
+                    <li class="subjects-nav__item" data-tab="3">
+                        <a href="#" class="subjects-nav__link">
+                            <span>Physics</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </nav>
+            <div class="tasks-desc">
+                <div class="tasks-desc__header">
+                    <button class="tasks-btn__pomodoro">Start Pomodoro</button>
+                </div>
+                <div class="tasks-desc__container">
+                    <!-- <div class="tasks-desc__item">
+                        <div class="tasks-desc__checkbox">
+                            <input type="checkbox" id="task1">
+                            <span class="tasks-desc__name">Do page 1 until page 2</span>
+                            <span class="tasks-desc__time">
+                                <i class="fas fa-clock"></i>
+                                30:00
+                            </span>
+                        </div>
+                        <div class="tasks-desc__checkbox-btn">
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </div>
+                    </div> -->
+                    
+                
+                    <!-- <div class="tasks-desc__item">
+                        <span>Read page 1</span>
+                        <span>null</span>
+                    </div>
+                    <div class="tasks-desc__item">
+                        <span>Read page 2</span>
+                        <span>30</span>
+                    </div>
+                    <div class="tasks-desc__item">
+                        <span>Read page 3</span>
+                        <span>50</span>
+                    </div> -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal__content">
+                <form action="" class="modal__form">
+                    <label for="taskname">Task</label>
+                    <input type="text" id="taskname">
+                    <label for="deadline">Deadline</label>
+                    <input type="time" id="deadline">
+                    <label for="timer">Timer</label>
+                    <input type="time" id="timer">
+                    <div class="modal__btn__container">
+                        <button class="modal__btn-cancel">Cancel</button>
+                        <button class="modal__btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
