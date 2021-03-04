@@ -56,19 +56,19 @@ function updateTasks() {
         taskEl.classList.add('tasks-desc__item');
         taskEl.setAttribute('data-tab', taskIndex);
         taskEl.innerHTML = `<div class="tasks-desc__checkbox"><input type="checkbox"><label class="checkbox__label">${tasks[subjectIndex][taskIndex][0]}<label></div><div class="tasks-desc__checkbox-btn"><button class="btn__tasks-edit">Edit</button><button class="btn__tasks-delete">Delete</button></div>`; 
-        tasksContainer.append(taskEl);
+        tasksContainer.prepend(taskEl);
     }
 
-    const addTaskInputEl = document.createElement('input');
-    addTaskInputEl.classList.add('tasks-desc__input');
-    addTaskInputEl.placeholder = "Add Task";
-    isAddInputExist = true;
-    tasksContainer.append(addTaskInputEl);
+    // const addTaskInputEl = document.createElement('input');
+    // addTaskInputEl.classList.add('tasks-desc__input');
+    // addTaskInputEl.placeholder = "Add Task";
+    // isAddInputExist = true;
+    // tasksContainer.append(addTaskInputEl);
 }  
 
 
 tasksContainer.addEventListener('keypress', function(e) {
-    if (isAddInputExist && e.key === 'Enter') {
+    if (e.key === 'Enter') {
         e.preventDefault();
         if (e.target.tagName === 'INPUT') {  
             const newTask = document.querySelector('.tasks-desc__input').value;
@@ -88,22 +88,10 @@ tasksContainer.addEventListener('keypress', function(e) {
 })
 
 
-tasksContainer.addEventListener('focusin', function(e) {
-    const taskElement = document.querySelector('.tasks-desc__item');
-    e.target.style.background = "rgb(55,63,94)";
-})
-
-
-tasksContainer.addEventListener('focusout', function(e) {
-    const taskElement = document.querySelector('.tasks-desc__item');
-    // if (taskElement && e.target.tagName !== 'INPUT' && e.target.textContent) { 
-    //     e.target.style.background = '';
-    //     const updatedTask = e.target.textContent; 
-    //     const updatedIndex = e.target.dataset.tab;
-    //     tasks[subjectIndex][updatedIndex][0] = updatedTask;
-    // }
-});
-
+// tasksContainer.addEventListener('focusin', function(e) {
+//     const taskElement = document.querySelector('.tasks-desc__item');
+//     e.target.style.background = "rgb(55,63,94)";
+// })
 
 
 tasksContainer.addEventListener('click', function(e) {
